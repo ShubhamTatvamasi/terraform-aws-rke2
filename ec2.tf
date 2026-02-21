@@ -4,8 +4,9 @@ module "ec2_instance" {
 
   name = var.project_name
 
-  create_spot_instance = var.spot_instance
-  spot_type            = var.spot_type
+  create_spot_instance      = var.spot_instance
+  spot_type                 = var.spot_type
+  spot_wait_for_fulfillment = true
 
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
