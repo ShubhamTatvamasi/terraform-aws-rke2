@@ -7,7 +7,7 @@ variable "project_name" {
 variable "sg_ports" {
   type        = list(number)
   description = "Security Group Ports"
-  default     = [22, 80, 443, 2379, 6443, 10250]
+  default     = [22, 80, 443, 6443]
 }
 
 variable "instance_type" {
